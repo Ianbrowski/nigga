@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lab 1</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin: 30px;
+            background-image: url('matrix.gif');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #00ff15;
+        }
+        h1 {
+            color: #00ff15;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: normal;
+            font-size: 60px;
+            margin: 20px;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #00ff15, 0 0 20px #00ff15;
+        }
+        .card {
+            border: 1px solid #33fd00;
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 450px;
+            margin: 100px auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
+            color: #00ff15;
+        }
+        .another {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #00ff08;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+        .buton {
+            background-color: #00ff08;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 7px 12px;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        input {
+            padding: 5px;
+            font-size: 14px;
+            background-color: #000;
+            color: #00ff15;
+            border: 1px solid #33fd00;
+            border-radius: 5px;
+        }
+
+        a {
+            color: #00ff15;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .hover {
+           transition: background-color 0.3s;
+           color: #ff0000;
+           font-size: 12px;
+           font-weight: bold;  
+        }
+
+        @media (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            h1 {
+                font-size: 40px;
+            }
+            .card {
+                padding: 20px;
+                margin: 50px auto;
+                max-width: 90%;
+            }
+            button, .buton {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+            input {
+                font-size: 12px;
+            }
+        }
+    </style>
+    <script>
+        function showAlert() {
+            alert("Hello, World!");
+        }
+
+        function greetUser() {
+            let name = document.getElementById("nameInput").value;
+            if (name) {
+                alert("Hello, " + name + "!");
+            } else {
+                alert("Please enter your name.");
+            }
+        }
+
+        function hoverAlert() {
+            alert("You hovered over me!");
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to JavaScript!</h1>
+
+    <div class="card">
+        <p>This is my first JavaScript page!</p>
+
+        <button onclick="showAlert()">Click Me</button>
+
+        <br><br>
+        <div class="another">
+        <label for="nameInput">Enter your name:</label>
+        <input type="text" id="nameInput">
+        <button class="buton" onclick="greetUser()">Submit</button>
+        </div>
+        
+        <br>
+
+        <a class="hover" href="#" onmouseover="hoverAlert()">Hover over me</a>
+    </div>
+</body>
+</html>
